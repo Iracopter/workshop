@@ -1,0 +1,379 @@
+@import 'variables';
+@import 'mixins';
+
+body{
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    @include button();
+    font-family: 'Poppins';
+    display:block;
+    position: relative;
+    margin:0 auto;
+
+    &:hover{
+        @include activeButton();   
+    }
+}
+
+.header{
+    background: url("../assets/grass.png");
+    background-size: cover;
+    height: 840px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+    margin-bottom: 50px;
+    /*position: relative;*/
+
+    img {
+        margin-right: 20px;
+        /*position: absolute;*/
+        width: 78px;
+        height: 84px;
+        display: flex;
+        align-items: center;
+        /*margin-top: -8px;*/
+        margin-top: 6px;
+    }
+
+    &__title {
+        width: 366px;
+        height: 96px;
+        margin: 0;
+        padding: 0;
+        padding-top: 20px;                  /*паддінг додай, тільки порахуй*/
+        padding-bottom: 0;
+        color: var(--primary-color);
+        font-style: normal;
+        font-weight: 800;
+        font-size: 60px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        gap: 0;
+        line-height: 32px;
+
+        span{
+            font-size: 27px;
+            justify-content: space-between;
+            letter-spacing:6.5px;
+            line-height: 32px;
+        }
+    }
+}
+
+
+
+.test{
+    display: block;
+    height: 519px;
+
+    .action{
+        width: 374px;                       
+        height: 64px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        color: var(--primary-color);
+        background: var(--shadow-color);
+        padding: 19px 48px 18px 47px;
+        border-radius: 59px;
+    }
+
+    .button_primary{
+        filter: drop-shadow(0px 10px 50px rgba(16, 51, 30, 0.5));
+        background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #F9F9F9 100%);
+    }
+
+    .huge-text{
+        width: 983px;
+        height: 269px;
+        color: var(--primary-color);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 144px;
+        line-height: 134px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 100px;
+        margin-top: 17px;
+        text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.main{
+    display: block;
+
+    h2{
+        text-align: center;
+        margin-top: 70px;
+        color: var(--secondary-color);
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 96px;
+        margin-bottom: 0;
+    }
+    .picture-lines{
+        width: 108px;
+        margin-top: -48px;
+        margin-left: 41%;
+    }
+
+    .picture-lines2{
+        width: 108px;
+        margin-top: -48px;
+        margin-left: 56.5%;
+    }
+
+    .cards_container{
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+
+        .card{
+            width:385px;
+            height: 504px;
+            color: #0D4D14;
+            border-radius: 30px;
+            box-shadow: 0px 10px 30px #10331E1A;
+
+            img{
+                width: max-content;
+            }
+
+            h3{
+                font-style: normal;
+                font-weight: 900;
+                font-size: 16px;
+                line-height: 24px;
+                margin: 30px 30px 0px 30px;
+            }
+
+            p{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                margin: 10px 30px 30px 30px;
+            }
+        }
+    }
+    button{
+        margin: 50px auto 70px auto;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    .picture-lines{
+        margin-top: -42px 100px 4px 100px;
+    }
+}
+
+.information-page{ 
+    height: 732px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/grass.png');
+    box-shadow: inset 0px 4px 50px rgba(0, 0, 0, 0.25);
+    display: block;
+
+    .information-page-text{
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        color: var(--primary-color);
+
+        p{
+            font-family: 'Poppins';
+            width: 360px;
+            height: 408px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-top: 154px;
+        }
+    
+    }
+
+    button{
+        margin: 50px auto;
+    }
+}
+
+.testymonials{
+    display: block;
+
+    h2{
+        @include headers();
+        margin-top: 70px;
+        margin-bottom: 17px;
+    }
+
+    .block1{
+        display: flex;
+        justify-content: center;
+        gap:45px;
+        margin-top: 53px;
+        height: 233px;
+
+        .feedback-card{
+            display: flex;
+            width: 577px;
+            height: 233px;
+            /*padding: 30px;*/
+            background: #FFFFFF;
+            border: 1px solid #6CB981;
+            border-radius: 40px;
+
+            img{
+                width: 80px;
+                height: 80px;
+                margin-top: 30px;
+                margin-left: 30px;
+                margin-right: 14px;
+            }
+
+            .feedback-info{
+                display: block;
+                width: 423px;
+                height: 173px;
+                color: #0D4C14;
+                /*margin-left:14px;*/
+                margin-top: 30px;
+                margin-right: 30px;
+    
+                h3{
+                    color: rgba(108, 185, 129, 1);
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 22px;
+                    width: 147px;
+                    padding: 0;
+                    margin: 0;
+                }
+                
+                img{
+                    width: 114px;
+                    height: 18px;
+                    margin: 0;
+                    padding: 0;
+                    margin-top: 10px;
+                }
+    
+                p{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: #0D4C14;
+                    width: 423px;
+                    height: 110px;
+                    margin-top: 13px;
+                    margin-bottom: 0;
+                }
+            }
+        }        
+    }
+}
+
+
+.contact{
+    background-color: rgba(252, 252, 252, 1);
+    height: 532px;
+    display: block;
+    margin-top: 48px;
+    padding-top: 44px;
+
+    h2{
+        @include headers();
+        margin: 0;
+        margin-bottom: 70px;
+    }
+
+    .test_block{
+        width: 314px;
+        height: 24px;
+        margin-top: 30px;
+        background: url('/assets/ic_round-mail.png') no-repeat;
+    }
+
+    .test_block2{
+        width: 314px;
+        height: 24px;
+        margin-top: 30px;
+        background: url('/assets/ic_round-call.png') no-repeat;
+    }
+
+    .test_block3{
+        width: 314px;
+        height: 24px;
+        margin-top: 30px;
+        background: url('/assets/ic_round-location-on.png') no-repeat;
+    }
+
+    a{
+        width: 314px;
+        height: 24px;
+        padding-left: 44px;
+        font-family: 'TT Hoves';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration: none;
+        color: black;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .contact-content{
+        display: flex;
+        width: 788px;
+        height: 266px;
+        justify-content: center;
+        gap:100px;
+        margin: auto;
+
+        .Contact-form{
+            width: 372px;
+            height: 266px;
+    
+            .form-submit{
+                @include button();
+                border: 3px solid #4DB96B;
+                height: 56px;
+                width: 168px;
+                display: block;
+                margin: auto;
+                border-radius: 61px;
+                &:hover{
+                    @include activeButton();    
+                }
+            }
+            .input-information{
+                width: 0;
+                width: 372px;
+                height: 56px;
+                border-radius: 61px;
+                background-color: #9FDEA9;
+                border: none;
+                margin-bottom: 14px;
+                padding:0;
+            }
+        }
+    }
+}
+
+footer{
+    height: 145px;
+    background-color: #324B29;
+}

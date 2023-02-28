@@ -1,0 +1,33 @@
+@import 'variables';
+
+@mixin button {
+    background-color: white;
+    color: #48924F;
+    width: 180px;
+    height: 70px;
+    border-radius: 35px;
+    border: 0ch;
+    font-family: 'Poppins';
+    /*box-shadow: 0px 10px 50px rgba(16, 51, 30, 0.5);*/
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    display:block;
+    position: relative;
+}
+
+@mixin activeButton() {
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--light-green-color);
+}
+
+@mixin headers{
+    text-align: center;
+    margin-top: 70px;
+    color: #828282;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 96px;
+}
