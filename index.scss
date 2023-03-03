@@ -87,6 +87,9 @@ button{
         background: var(--shadow-color);
         padding: 19px 48px 18px 47px;
         border-radius: 59px;
+        &:hover{
+            text-decoration: underline ;
+        }
     }
 
     .button_primary{
