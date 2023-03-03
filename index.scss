@@ -15,7 +15,8 @@ button{
     margin:0 auto;
 
     &:hover{
-        @include activeButton();   
+        @include activeButton();  
+        cursor: pointer; 
     }
 }
 
@@ -47,10 +48,10 @@ button{
 
     &__title {
         width: 366px;
-        height: 96px;
+        height: 76px;
         margin: 0;
         padding: 0;
-        padding-top: 20px;                  /*паддінг додай, тільки порахуй*/
+        padding-top: 20px;                /*паддінг додай, тільки порахуй*/
         padding-bottom: 0;
         color: var(--primary-color);
         font-style: normal;
@@ -91,6 +92,10 @@ button{
     .button_primary{
         filter: drop-shadow(0px 10px 50px rgba(16, 51, 30, 0.5));
         background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #F9F9F9 100%);
+        cursor: pointer;
+        &:hover{
+            background: rgba(0, 0, 0, 0.5);
+        }
     }
 
     .huge-text{
@@ -124,29 +129,37 @@ button{
     .picture-lines{
         width: 108px;
         margin-top: -48px;
-        margin-left: 41%;
+        margin-left: calc(50vw - 152px);
     }
 
     .picture-lines2{
         width: 108px;
         margin-top: -48px;
-        margin-left: 56.5%;
+        margin-left: calc(50vw + 100px);
     }
 
     .cards_container{
         display: flex;
         justify-content: center;
         gap: 22px;
+        min-height: 504px;
+
 
         .card{
-            width:385px;
+            margin: 0%;
+            padding: 0%;
+            max-width:385px;
             height: 504px;
             color: #0D4D14;
             border-radius: 30px;
             box-shadow: 0px 10px 30px #10331E1A;
 
             img{
-                width: max-content;
+                /*width: max-content;*/
+                width: 100%;
+                max-height: 290px;
+                margin: 0%;
+                padding: 0%;
             }
 
             h3{
@@ -162,24 +175,23 @@ button{
                 font-size: 14px;
                 line-height: 20px;
                 margin: 10px 30px 30px 30px;
+                min-height: 120px;
             }
         }
     }
     button{
         margin: 50px auto 70px auto;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    }
-
-    .picture-lines{
-        margin-top: -42px 100px 4px 100px;
+        cursor: pointer;
     }
 }
 
 .information-page{ 
-    height: 732px;
+    min-height: 682px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/grass.png');
     box-shadow: inset 0px 4px 50px rgba(0, 0, 0, 0.25);
     display: block;
+    padding-bottom: 50px;
 
     .information-page-text{
         display: flex;
@@ -189,11 +201,11 @@ button{
 
         p{
             font-family: 'Poppins';
-            width: 360px;
-            height: 408px;
+            max-width: 360px;
+            min-height: 408px;
             font-style: normal;
             font-weight: 600;
-            font-size: 18px;
+            font-size: 112.50%;
             line-height: 24px;
             text-align: center;
             margin-top: 0;
@@ -204,7 +216,9 @@ button{
     }
 
     button{
-        margin: 50px auto;
+        margin: 0%;
+        margin: 50px auto 0px auto;
+        cursor: pointer;
     }
 }
 
@@ -222,12 +236,12 @@ button{
         justify-content: center;
         gap:45px;
         margin-top: 53px;
-        height: 233px;
+        min-height: 233px;
 
         .feedback-card{
             display: flex;
-            width: 577px;
-            height: 233px;
+            max-width: 577px;
+            min-height: 233px;
             /*padding: 30px;*/
             background: #FFFFFF;
             border: 1px solid #6CB981;
@@ -243,8 +257,8 @@ button{
 
             .feedback-info{
                 display: block;
-                width: 423px;
-                height: 173px;
+                max-width: 423px;
+                min-height: 173px;
                 color: #0D4C14;
                 /*margin-left:14px;*/
                 margin-top: 30px;
@@ -273,8 +287,8 @@ button{
                     font-size: 14px;
                     line-height: 22px;
                     color: #0D4C14;
-                    width: 423px;
-                    height: 110px;
+                    max-width: 423px;
+                    min-height: 110px;
                     margin-top: 13px;
                     margin-bottom: 0;
                 }
@@ -289,12 +303,13 @@ button{
     height: 532px;
     display: block;
     margin-top: 48px;
-    padding-top: 44px;
+
 
     h2{
         @include headers();
         margin: 0;
         margin-bottom: 70px;
+        padding-top: 44px;
     }
 
     .test_block{
@@ -332,6 +347,7 @@ button{
 
         &:hover{
             text-decoration: underline;
+            cursor: pointer;
         }
     }
 
@@ -367,7 +383,8 @@ button{
                 background-color: #9FDEA9;
                 border: none;
                 margin-bottom: 14px;
-                padding:0;
+                padding:0px;
+                cursor: pointer;
             }
         }
     }
